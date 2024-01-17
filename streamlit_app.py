@@ -34,10 +34,11 @@ sender_name = st.sidebar.text_input("""Input Sender ID""")
 receiver_name = st.sidebar.text_input("""Input Receiver ID""")
 step = st.sidebar.slider("""Transaction Duration: """)
 
-types = st.sidebar.selectbox("Transfer Mode ", 
+types = st.sidebar.selectbox("Transfer Mode", 
                              ('Cash in', 'Cash Out', 'Debit' , 'Payment', 'Transfer' ),
                              index=None,
                              placeholder='Selec tpye of transfer mode')
+st.write('You selected:', types)
 type = ''
 if types == 'Cash in':
     type = 0
